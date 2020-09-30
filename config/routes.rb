@@ -1,0 +1,25 @@
+Rails.application.routes.draw do
+  get 'orders/index'
+  get 'orders/:id', to: 'orders#show'
+  delete 'orders/:id', to: 'orders#delete'
+  get '/home' , to: 'sample#home'
+  get '/about', to:'sample#about'
+  get '/help', to: 'sample#help'
+  get '/sign_up', to: 'users#new'
+  post '/sign_up', to: 'users#create'
+  get '/login', to: 'session#new'
+  post '/login', to: 'session#create'
+  delete '/logout', to: 'session#destroy'
+  root 'sample#home'
+  resources :users
+  get '/accounts', to: 'account#index'
+  get '/buy_account', to: 'account#buy'
+  delete '/account/:id', to: 'account#destroy'
+  post '/buy_account', to: 'account#validate'
+  get '/account/:id', to: 'account#show'
+  get '/accounts/new', to: 'account#new'
+  post '/accounts/new', to: 'account#create'
+  get '/account/:id/edit', to: 'account#edit'
+  post '/account/:id/edit', to: 'account#update'
+  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+end

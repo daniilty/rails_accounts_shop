@@ -1,0 +1,6 @@
+<% @accs.each do |acc| %>
+  <div class="acn">
+  <h2><%= acc.email %></h2>
+    <p><%= link_to 'Удалить', '/account/' + acc.id.to_s, method: :delete %></p>
+  </div>
+<% end %>

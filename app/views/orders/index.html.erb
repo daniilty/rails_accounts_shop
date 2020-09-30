@@ -1,0 +1,10 @@
+<% if @orders.empty? %>
+  <h1 align="center">Пока что свободных заказов нет</h1>
+<% else %>
+<% @orders.each do |acc| %>
+  <div class="acn">
+    <h2><%= acc.email %></h2>
+    <p><%= link_to 'Удалить', '/orders/' + acc.id.to_s, method: :delete %></p>
+  </div>
+<% end %>
+<% end %>

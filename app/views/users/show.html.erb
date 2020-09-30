@@ -1,0 +1,21 @@
+<div id="accdt">
+  <% if @acnts != nil %>
+    <h2 align="center">Ваш аккаунт:</h2>
+    <% @acnts.each do |acc| %>
+      <p><b>Email: </b><%= acc.email %></p>
+      <p><b>Пароль: </b><%= acc.pass %></p>
+      <h2 align="center">Как пользоваться:</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vehicula mi mi, eget dignissim nunc bibendum sed. Sed gravida vehicula nulla eu tempor. Aenean eu lacus at nibh condimentum pellentesque vitae ac tellus. Vivamus eget nisl aliquam ipsum aliquet sagittis id in nunc. Aliquam mattis neque turpis, eu bibendum nisi ultricies et. Pellentesque ultricies odio at urna porttitor placerat. Fusce rutrum sapien vitae quam iaculis egestas. Nunc porttitor, risus convallis condimentum sollicitudin, nisi ligula fringilla mi, viverra cursus mi sem efficitur dolor. Aenean tincidunt, enim id imperdiet elementum, purus est venenatis lectus, quis rutrum nunc enim vel ligula. Nulla vel ipsum magna.
+      </p>
+      <p>
+        Integer pretium non risus sed tempor. Donec massa justo, dictum non purus id, bibendum viverra magna. Vivamus lobortis, magna at dapibus ultricies, ex quam aliquet mauris, ac accumsan dui risus quis quam. Nam consectetur, dolor gravida commodo facilisis, ligula ligula accumsan ligula, a pharetra urna sapien eu lorem. Donec nec posuere ante. Integer tristique massa sed sem laoreet ultrices. Aenean sed nisl quis diam venenatis fringilla at eget arcu. In hac habitasse platea dictumst. Vivamus porta eleifend velit in elementum. Proin sit amet magna at libero gravida consectetur. Maecenas id sapien lacinia nulla ullamcorper suscipit.
+      </p>
+      <p>
+        Phasellus at fermentum diam. Ut sit amet venenatis ante, ornare sagittis mi. Aliquam lacinia cursus congue. Phasellus tincidunt maximus tincidunt. Nunc vel sapien sed neque convallis aliquam nec quis eros. Nunc interdum porttitor elit non luctus. Sed auctor justo eu quam egestas, sollicitudin mollis metus facilisis. Morbi vel est sagittis, efficitur lectus eget, cursus augue. Ut cursus dignissim ex, finibus pellentesque nisi fringilla eu. Nulla vel lacus id tortor malesuada efficitur. Cras consequat viverra purus. Duis augue augue, lacinia id mi sed, tincidunt auctor sem. Fusce posuere nibh at sollicitudin pharetra.
+      </p>
+    <% end %>
+    <% else %>
+      <h2 align="center">У вас пока еще нет аккаунта :(</h2>
+    <div align="center"> <div id="btn"><%= link_to image_tag("trans.png"), buy_account_path %></div></div>
+  <% end %></div>

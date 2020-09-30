@@ -1,0 +1,7 @@
+<%= form_for(@acc, url: buy_account_url) do |f|%>
+  <%= f.label :start, "Start Date" %>
+  <%= f.date_select :start %>
+  <%= f.label :end, "End date" %>
+  <%= f.date_select :end %>
+  <%= f.submit "Проверить и купить", class: "btn btn-primary"%>
+<% end %>
